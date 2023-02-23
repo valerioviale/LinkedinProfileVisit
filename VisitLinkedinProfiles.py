@@ -41,7 +41,7 @@ n_pages = 5 # number of pages you want to submit excluding the last one, range i
 for n in range(1, n_pages):
     # *** Add to the next line the page where you want to start to send messages, if you want to use recently added connection just remove +str(n)
     # and add https://www.linkedin.com/mynetwork/invite-connect/connections/
-    driver.get("https://www.linkedin.com/search/results/people/?geoUrn=%5B%22103350119%22%5D&keywords=%22sustainability%20manager%22&origin=FACETED_SEARCH&page=" + str(n))
+    driver.get("https://www.linkedin.com/search/results/people/?origin=SWITCH_SEARCH_VERTICAL&page=" + str(n))
     
     # Wait for a random amount of time between 3 to 7 seconds before proceeding to the next step
     time.sleep(random.randint(3, 7))
