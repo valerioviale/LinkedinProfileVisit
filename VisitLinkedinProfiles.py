@@ -35,7 +35,10 @@ time.sleep(10)
 ### end of the login process
 import random
 
-n_pages = 5 # number of pages you want to submit excluding the last one, range is not inclusive
+n_pages = 5 # number of pages you want to submit excluding the last one, range is not inclusive. If you want to visit 4 pages, write 5 here.
+# In the provided code, the variable n_pages is used to determine the number of pages to visit. However, the range of the loop that iterates over these pages is not inclusive of the upper limit, which means that if you want to visit a total of n_pages pages, you need to specify the number of pages to visit as n_pages + 1 in the variable definition.
+# For example, if you want to visit 4 pages, you would set n_pages to 5, because the loop will iterate from 1 to 4 (inclusive), meaning it will visit 4 pages.
+# In general, you should set n_pages to the number of pages you want to visit, plus 1.
 
 # Loop through each page
 for n in range(1, n_pages):
