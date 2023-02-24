@@ -41,7 +41,6 @@ n_pages = 5 # number of pages you want to submit excluding the last one, range i
 # In general, you should set n_pages to the number of pages you want to visit, plus 1.
 
 # Loop through each page
-Loop through each page
 for n in range(1, n_pages):
     # *** Add to the next line the page where you want to start to open profiles, if you want to use a generic starting page just add
     # https://www.linkedin.com/search/results/people/?origin=SWITCH_SEARCH_VERTICAL&page=
