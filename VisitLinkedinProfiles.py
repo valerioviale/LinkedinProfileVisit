@@ -33,9 +33,10 @@ submit = driver.find_element(By.XPATH,"//button[@type='submit']").click() #click
 time.sleep(10)
 
 ### end of the login process
+
 import random
 
-n_pages = 5 # number of pages you want to submit excluding the last one, range is not inclusive. If you want to visit 4 pages, write 5 here.
+n_pages = 11 # number of pages you want to submit excluding the last one, range is not inclusive. If you want to visit 4 pages, write 5 here.
 # In the provided code, the variable n_pages is used to determine the number of pages to visit. However, the range of the loop that iterates over these pages is not inclusive of the upper limit, which means that if you want to visit a total of n_pages pages, you need to specify the number of pages to visit as n_pages + 1 in the variable definition.
 # For example, if you want to visit 4 pages, you would set n_pages to 5, because the loop will iterate from 1 to 4 (inclusive), meaning it will visit 4 pages.
 # In general, you should set n_pages to the number of pages you want to visit, plus 1.
@@ -44,7 +45,7 @@ n_pages = 5 # number of pages you want to submit excluding the last one, range i
 for n in range(1, n_pages):
     # *** Add to the next line the page where you want to start to open profiles, if you want to use a generic starting page just add
     # https://www.linkedin.com/search/results/people/?origin=SWITCH_SEARCH_VERTICAL&page=
-    driver.get("https://www.linkedin.com/search/results/people/?origin=SWITCH_SEARCH_VERTICAL&page=" + str(n))
+    driver.get("https://www.linkedin.com/search/results/people/?geoUrn=%5B%22103350119%22%5D&keywords=sustainability&origin=FACETED_SEARCH&page=1" + str(n))
     
     # Wait for a random amount of time between 3 to 7 seconds before proceeding to the next step
     time.sleep(random.randint(3, 7))
@@ -70,7 +71,7 @@ for n in range(1, n_pages):
         driver.switch_to.window(driver.window_handles[-1])
         
         # Wait for a random amount of time between 3 to 7 seconds before proceeding to the next step
-        time.sleep(random.randint(3, 7))
+        time.sleep(random.randint(2, 6))
         
         # Close the current tab
         driver.close()
@@ -80,3 +81,4 @@ for n in range(1, n_pages):
         
         # Wait for a random amount of time between 3 to 7 seconds before proceeding to the next step
         time.sleep(random.randint(3, 7))
+
